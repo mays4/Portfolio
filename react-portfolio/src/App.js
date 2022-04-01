@@ -2,7 +2,10 @@
 
 import { Routes,Route} from 'react-router-dom'
 import Layout from './components/Layout';
+
 import './App.scss';
+
+
 function App() {
   return (
     <>
@@ -12,11 +15,11 @@ function App() {
    
     <Route path="/" element={<Layout/>}>
     </Route>
-    <Route path="/Home" element={<Home/>}>
+    {/* <Route path="/Home" element={<Home/>}>
     </Route>
-    <Route path="/About" element={<About/>}>
+    <Route path="/About" element={<About/>}> */}
 
-    </Route>
+    {/* </Route> */}
     </Routes>
     
     </>
