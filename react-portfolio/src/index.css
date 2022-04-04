@@ -1,13 +1,14 @@
 html{
   font-size:62.5% ;
-  color: blue;
+  color: rgb(160, 160, 224);
 }
 
 body {
   margin: 0;
   font: 300 11px/1.4 'Helvetica Neue','sans-serif';
   color: #4444;
-  background: #7dc1e6;
+  /* background: #BEB3B4; */
+  background: rgba(255, 167, 167, 0.4039215686);
   overflow: hidden;
   display: block;
   -webkit-font-smoothing: antialiased;

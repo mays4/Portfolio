@@ -8,14 +8,14 @@ import {
   
 } from '@fortawesome/free-brands-svg-icons'
 import './index.scss'
-import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
+import LogoS from '../../assets/images/logo-m-m.png'
+import LogoSubtitle from '../../assets/images/image2.png'
 const Sidbar = () => {
   return (
     <div className='nav-bar'>
       <Link className='logo' to='/'>
-        <img src={LogoS} alt ='logo'/>
-        <img className='sub-logo' src={LogoSubtitle} alt ='mays'/>
+        <img className='sidbar-img' src={LogoS} alt ='logo'/>
+        <img className='sub-logo sidbar-img' src={LogoSubtitle} alt ='mays'/>
       </Link>
       <nav>
         <NavLink exact='true' activeclassname='active' to='/'>
@@ -31,12 +31,12 @@ const Sidbar = () => {
       <ul>
         <li>
           <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mays-alraheem">
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
+            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" className='linkedin'/>
           </a>
         </li>
         <li>
           <a target="_blank" rel="noreferrer" href="https://github.com/mays4">
-            <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
+            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" className='github'/>
           </a>
         </li>
       </ul>

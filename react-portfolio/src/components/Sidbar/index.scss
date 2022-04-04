@@ -1,5 +1,6 @@
 .nav-bar{
-  background: #181818;
+  // background: #ffa7a767;
+  background: #BEB3B4;
   width: 60px;
   height: 100%;
   position: absolute;
@@ -10,8 +11,9 @@
 .logo{
   display: block;
   padding: 8px 0;
+  margin: 8px auto;
 }
-img{
+img.sidbar-img{
   display: block;
   margin: 8px auto;
   width: 24px;
@@ -19,6 +21,10 @@ img{
   &.sub-logo{
     width: 50px;
 
+  }
+  .sidbar-img{
+    // display: block;
+    margin: 8px 10px;
   }
 }
 
@@ -42,7 +48,8 @@ nav{
     transition: all 0.3s ease-out; 
   }
   &:hover{
-    color: #ffd700;
+    // color: #ffd700;
+    color:#4e0837;
   
   svg{
     opacity: 0;;
@@ -81,7 +88,7 @@ a.contact-link{
 }
 a.active{
   svg{
-    color:#ffd700;
+    color:#3f0d2e;
   }
 }
 }
@@ -100,8 +107,15 @@ ul{
       font-size: 15px;
       line-height: 16px;
       &:hover svg{
-        color:#ffd700;
+        // color:#ffd700;
+        color:#4e0837;
       }
     }
+  }
+  .linkedin{
+    height: 24px;
+  }
+  .github{
+    height: 24px;
   }
 }
