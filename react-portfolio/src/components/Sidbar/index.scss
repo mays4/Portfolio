@@ -61,6 +61,7 @@ nav{
   &:after{
     content: '';
     font-size:9px;
+    font-weight: 600;
     letter-spacing: 2px;
     position: absolute;
     bottom: 0;
@@ -89,6 +90,7 @@ a.contact-link{
 a.active{
   svg{
     color:#3f0d2e;
+    // color:#FDA9A9;
   }
 }
 }
@@ -105,10 +107,12 @@ ul{
       padding: 7px 0;
       display: block;
       font-size: 15px;
+      
       line-height: 16px;
       &:hover svg{
         // color:#ffd700;
         color:#4e0837;
+       
       }
     }
   }

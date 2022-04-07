@@ -3,6 +3,9 @@ import './index.scss';
 import title from '../../assets/images/logo-m-m.png'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from "../AnimatedLetters"
+import Logo from './Logo'
+import Profile from './Profile'
+import Loader from 'react-loaders'
 
 import 'animate.css'
 
@@ -42,15 +45,21 @@ const Home = () => {
             idx={21}
           />
         </h1>
-        <h2>Full Stack Developer  </h2>
+        <h2>Full Stack Developer</h2>
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
+        
       </div>
       
+      <Profile/>
+      <Logo/>
+   
+    
+      
     </div>
-
- 
+    <Loader type="line-spin-fade-loader" />
+  
   </>
   )
 }

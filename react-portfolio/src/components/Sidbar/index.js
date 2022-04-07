@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import './index.scss'
 import LogoS from '../../assets/images/logo-m-m.png'
-import LogoSubtitle from '../../assets/images/image2.png'
+import LogoSubtitle from '../../assets/images/mays.png'
 const Sidbar = () => {
   return (
     <div className='nav-bar'>
@@ -25,7 +25,7 @@ const Sidbar = () => {
           <FontAwesomeIcon icon={faUser} color="#4d4d4e"/>
         </NavLink>
         <NavLink exact='true' activeclassname='active' to='/contact' className="contact-link">
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e"/>
+          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"/>
         </NavLink>
       </nav>
       <ul>
