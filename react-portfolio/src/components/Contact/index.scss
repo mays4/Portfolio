@@ -1,61 +1,104 @@
-.contact-form {
+.contact{
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  margin-top: 800px;
-
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      padding: 0;
+  .zone{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    .letters{
+    
       margin: 0;
-      list-style: none;
-      margin-bottom: 10px;
-      opacity: 0;
-      overflow: hidden;
-      display: block;
-      clear: both;
-      position: relative;
-      animation: fadeInUp 2s 2s;
-      animation-fill-mode: forwards;
+      padding-top: 4px;
+     margin-left: 35px;
     }
-
-    li.half {
-      width: 49%;
-      margin-left: 2%;
-      float: left;
-      clear: none;
-
-      &:first-child {
-        margin-left: 0;
+    .parg{
+      padding-top: 0;
+      .contact-info-p{
+        font-size: 30px;
+        color: #fff;
+        margin: 0;
+        font-weight: 300;
+      }
+      
+    }
+    .form{    
+      display: flex;
+      flex-direction: column;
+      
+      padding-top: 20px;
+      padding-left: 10%;
+      margin-top: 20px;
+        
+        .form-l{
+          width: 100%;
+          .name-email{
+            display: flex;
+            input[type='email'] {
+              // margin-left: 10px;
+            //  margin-right: 6%;
+        
+            }
+          
+          }
+          
+        .half{  
+            margin-bottom: 10px;
+            opacity: 0;
+            overflow: hidden;
+            animation: fadeInUp 2s 2s;
+            animation-fill-mode: forwards;
+           
+          }
+        
+       div.half{
+        //  width: 49%;
+           margin: 10px;
+           &:first-child {
+             margin: 0;
+           }
       }
     }
-  }
-
-  input[type='text'],
-  input[type='email'] {
-    width: 100%;
-    border: 0;
-    background: #3f0d2e ;
-    height: 50px;
-    font-size: 16px;
-    color: #fff;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-
-  textarea {
-    width: 100%;
+        
+      
+    }
+    input[name="user_name"],
+  input[name="email"], input[name="subject"]{
+ 
     border: 0;
     background: #3f0d2e;
     height: 50px;
     font-size: 16px;
     color: #fff;
-    padding: 20px;
     box-sizing: border-box;
-    min-height: 150px;
+ 
+    //  margin-left: 10%;
+    
+  }
+  input[name="subject"]{
+    width: 80%;
+    margin-left: 60px;
+  }
+  input[name="user_name"]{
+    margin-left: 60px;
+    width:36%
+  }
+  input[name="email"]{
+    margin-left: 8%;
+    width: 36%;
+  
   }
 
+  textarea {
+    width: 80%;
+    border: 0;
+    background: #3f0d2e;
+    height: 100px;
+    font-size: 16px;
+    color: #fff;
+    box-sizing: border-box;
+    margin-left: 60px;
+  }
   .flat-button {
     color:#3f0d2e;
     font-size: 13px;
@@ -71,22 +114,71 @@
     text-transform: uppercase;
     float: right;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 200px;
     &:hover {
-      // background: #ffd700;
       background:#3f0d2e;
-      
       color: #FDA9A9;
     }
-  }
+  }   
+  }  
+  
 }
 
+
+.contact-form {
+  // width: 100%;
+  // margin-top: 800px;
+
+  ul {
+    // padding: 0;
+    // margin: 0;
+
+    li {
+      // padding: 0;
+      // margin: 0;
+      // list-style: none;
+      // margin-bottom: 10px;
+      // opacity: 0;
+      // overflow: hidden;
+      // display: block;
+      // clear: both;
+      // position: relative;
+      // animation: fadeInUp 2s 2s;
+      // animation-fill-mode: forwards;
+    }
+
+    li.half {
+      // width: 49%;
+      // margin-left: 2%;
+      // float: left;
+      // clear: none;
+
+      &:first-child {
+        // margin-left: 10;
+        // padding-left: 20px;
+      }
+    }
+  }
+
+}
+h1{
+  font-size: 53px;
+  font-family: 'Coolveetica';
+  color: #3f0d2e;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 40px;
+  left: 10px;
+  padding-top: 20px;
+
+}
 .map-wrap {
-  background: rgba(8, 253, 216, 0.1);
+  
   float: right;
-  width: 53%;
-  height: 115%;
-  margin-top: -3%;
+  width: 50%;
+  // height: 115%;
+  // margin-top: -3%;
+  padding: 2px;
 }
 
 .leaflet-container {
@@ -96,10 +188,12 @@
   opacity: 0;
   animation: backInRight 1s 1.2s;
   animation-fill-mode: forwards;
+
 }
 
 .info-map {
-  position: absolute;
+  // position: absolute;
+  
   background: #000;
   top: 50px;
   right: 30%;
@@ -123,7 +217,116 @@
   }
 }
 .contact-info-p{
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  // padding-bottom: 300px;
+  // font-weight: 600;
+  font-size: 30px;
+  padding-left: 100px;
+}
+.letters{
+  padding-left: 60px;
+  padding-bottom: 20px;
+}
 
-  font-weight: 600;
+@media screen and (max-width: 800px) {
+  .contact{
+    display: flex;
+    flex-direction: row;
+    .zone{
+      // display: flex;
+      // flex-direction: column;
+      
+      .letters{
+        font-size:14px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .parg{
+        .contact-info-p{
+          font-size: 10px;
+          width: 100%;
+          font-weight: 200;
+          margin-bottom: 0;
+          padding-bottom: 0px;
+          color: rgb(13, 32, 118);
+        }
+      }
+    }
+  }
+  .form{
+
+    // background-color: #4b8080;
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-left: 10%;
+    
+      
+      .form-l{
+        width: 100%;
+      
+      
+      
+     div.half{
+      //  width: 49%;
+         margin-left: 10px;
+         &:first-child {
+           margin: 0;
+         }
+    }
+  }
+
+    
+  }
+  
+
+}
+@media screen and (max-width:500px) {
+  .contact{
+    display: flex;
+    flex-direction: column;
+    .zone{
+      // display: flex;
+      // flex-direction: column;
+      width: 100%;
+      
+      .letters{
+        font-size:14px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .parg{
+        .contact-info-p{
+          font-size: 10px;
+          width: 100%;
+          font-weight: 200;
+          margin-bottom: 0;
+          padding-bottom: 0px;
+          color: rgb(67, 15, 15);
+        }
+      }
+     
+}
+.map-wrap {
+   width: 100%;
+
+
+  .leaflet-container{
+   
+    height: 400px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+  }
+}
+
+  }
+  
+
+  
 }

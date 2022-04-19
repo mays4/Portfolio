@@ -1,5 +1,5 @@
 import './index.scss'
-import Table from '../../../assets/images/computer.png'
+import Table from '../../../assets/images/comp1.png'
 import React from 'react'
 
 

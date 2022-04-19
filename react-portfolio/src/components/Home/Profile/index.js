@@ -1,7 +1,7 @@
 import './index.scss'
 
 import React from 'react'
-import ProfileLogo from '../../../assets/images/profile.png'
+import ProfileLogo from '../../../assets/images/face5.png'
 
  const Profile = () => {
   return (

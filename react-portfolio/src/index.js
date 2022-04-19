@@ -4,13 +4,16 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
+import { ThemeProvider } from './context/ThemeContext'
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <ThemeProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </ThemeProvider>
     
   </React.StrictMode>,
    document.getElementById('root')

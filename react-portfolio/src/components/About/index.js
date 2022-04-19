@@ -1,9 +1,11 @@
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState ,useContext} from 'react'
 import Info from './Info/index'
 import AnimatedLetters from'../AnimatedLetters/index'
 import './index.scss'
+import { ThemeContext } from '../../context/ThemeContext';
 import 'animate.css'
+import Logo from '../Home/Logo/index'
 import {
   faNode,
   faCss3Alt,
@@ -15,6 +17,7 @@ import {
 import Loader from 'react-loaders'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const About = () => {
+  const {theme,setTheme}= useContext(ThemeContext);
   const [letterClass, setLetterClass] = useState('text-animate')
   useEffect(() => {
     setTimeout(() => {
@@ -23,18 +26,29 @@ const About = () => {
   }, [])
   return (
     <>
-    <div className='container about-page'>
-      <div className='text-zone'>
-      <h1>
-        <AnimatedLetters letterClass={letterClass} strArray={['A','b','o','u','t',' ','M','e']}
-        idx={15}
+    <div className={theme}>
+    <div className='page'>
+      <div className='cont'>
+      <div className='text-z'>
+      <h1 className='about-p'>
+        <AnimatedLetters letterClass={letterClass} strArray={['A','b','o','u','t',' ']}
+        idx={16}
         />
+        {/* <div className='name-logo'> */}
+        <Logo/>
+        {/* </div> */}
+       
+        
       </h1>
-      <p>I'm  Full-Stack developer looking for the opportunity to work with the latest
+      </div>
+      <div className='par-sect'>
+         <p className='par'>I'm  Full-Stack developer looking for the opportunity to work with the latest
             technologies on challenging and diverse projects.</p>
-      <p> I'm quietly confident,Like to solve-problems,curious to learn.</p>
+      <p className='par'> I'm quietly confident,Like to solve-problems,curious to learn.</p>
+      </div>
+      </div>
+     
 
-            </div>
 
             <div className="stage-cube-cont">
             
@@ -68,7 +82,7 @@ const About = () => {
    
     </div>
     <Loader type="line-spin-fade-loader" />
-    
+    </div>
     </>
   )
 }
