@@ -2,22 +2,21 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  
   .zone{
     display: flex;
     flex-direction: column;
     width: 50%;
     .letters{
-    
-      margin: 0;
       padding-top: 4px;
      margin-left: 35px;
     }
     .parg{
-      padding-top: 0;
+      padding-top: 20px;
       .contact-info-p{
         font-size: 30px;
-        color: #fff;
-        margin: 0;
+        color: #3f0d2e;
+        margin-bottom: 20px;
         font-weight: 300;
       }
       
@@ -25,7 +24,6 @@
     .form{    
       display: flex;
       flex-direction: column;
-      
       padding-top: 20px;
       padding-left: 10%;
       margin-top: 20px;
@@ -34,12 +32,6 @@
           width: 100%;
           .name-email{
             display: flex;
-            input[type='email'] {
-              // margin-left: 10px;
-            //  margin-right: 6%;
-        
-            }
-          
           }
           
         .half{  
@@ -52,7 +44,6 @@
           }
         
        div.half{
-        //  width: 49%;
            margin: 10px;
            &:first-child {
              margin: 0;
@@ -69,10 +60,10 @@
     background: #3f0d2e;
     height: 50px;
     font-size: 16px;
-    color: #fff;
+    // color: #fff;
     box-sizing: border-box;
- 
-    //  margin-left: 10%;
+    border-radius: 20px;
+    padding-left: 20px;
     
   }
   input[name="subject"]{
@@ -81,7 +72,8 @@
   }
   input[name="user_name"]{
     margin-left: 60px;
-    width:36%
+    width:36%;
+    
   }
   input[name="email"]{
     margin-left: 8%;
@@ -98,69 +90,24 @@
     color: #fff;
     box-sizing: border-box;
     margin-left: 60px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
   }
   .flat-button {
-    color:#3f0d2e;
     font-size: 13px;
-    font-family: sans-serif;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid #3f0d2e;
     float: left;
-    border-radius: 4px;
-    background: 0 0;
-    text-transform: uppercase;
     float: right;
-    text-align: center;
     margin-right: 200px;
-    &:hover {
-      background:#3f0d2e;
-      color: #FDA9A9;
-    }
+    
   }   
   }  
   
 }
 
 
-.contact-form {
-  // width: 100%;
-  // margin-top: 800px;
 
-  ul {
-    // padding: 0;
-    // margin: 0;
-
-    li {
-      // padding: 0;
-      // margin: 0;
-      // list-style: none;
-      // margin-bottom: 10px;
-      // opacity: 0;
-      // overflow: hidden;
-      // display: block;
-      // clear: both;
-      // position: relative;
-      // animation: fadeInUp 2s 2s;
-      // animation-fill-mode: forwards;
-    }
-
-    li.half {
-      // width: 49%;
-      // margin-left: 2%;
-      // float: left;
-      // clear: none;
-
-      &:first-child {
-        // margin-left: 10;
-        // padding-left: 20px;
-      }
-    }
-  }
-
-}
 h1{
   font-size: 53px;
   font-family: 'Coolveetica';
@@ -193,7 +140,6 @@ h1{
 
 .info-map {
   // position: absolute;
-  
   background: #000;
   top: 50px;
   right: 30%;
@@ -211,15 +157,9 @@ h1{
   span {
     font-size: 16px;
 
-    span {
-      // color: #ffd700;
-    }
   }
 }
 .contact-info-p{
-  // margin-bottom: 20px;
-  // padding-bottom: 300px;
-  // font-weight: 600;
   font-size: 30px;
   padding-left: 100px;
 }
@@ -231,47 +171,42 @@ h1{
 @media screen and (max-width: 800px) {
   .contact{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     .zone{
-      // display: flex;
-      // flex-direction: column;
-      
+       width: 100%;
       .letters{
-        font-size:14px;
+        font-size:30px;
         padding-bottom: 0;
         margin-bottom: 0;
       }
       .parg{
         .contact-info-p{
-          font-size: 10px;
+          font-size: 18px;
           width: 100%;
-          font-weight: 200;
-          margin-bottom: 0;
-          padding-bottom: 0px;
-          color: rgb(13, 32, 118);
+          font-weight: 300;
+          
+          //  margin-left: 2px;
+          // padding-left: 50px;
+          // margin-right: 4px;
+         
+        
+          
+          // margin-bottom: 0;
+          // padding-bottom: 0px;
+          // color: rgb(13, 32, 118);
         }
       }
     }
   }
   .form{
-
-    // background-color: #4b8080;
     display: flex;
     flex-direction: column;
-    
     padding-top: 20px;
     padding-left: 20px;
     margin-top: 20px;
-    margin-left: 10%;
-    
-      
       .form-l{
         width: 100%;
-      
-      
-      
      div.half{
-      //  width: 49%;
          margin-left: 10px;
          &:first-child {
            margin: 0;
@@ -281,10 +216,13 @@ h1{
 
     
   }
+  .map-wrap {
+    width: 100%;
+  }
   
 
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:576px) {
   .contact{
     display: flex;
     flex-direction: column;
@@ -294,18 +232,20 @@ h1{
       width: 100%;
       
       .letters{
-        font-size:14px;
+        font-size:30px;
+        margin-top: 20px;
         padding-bottom: 0;
-        margin-bottom: 0;
+        margin-bottom: 10px;
       }
       .parg{
         .contact-info-p{
-          font-size: 10px;
+          font-size: 30px;
           width: 100%;
-          font-weight: 200;
+          font-weight: 300;
           margin-bottom: 0;
           padding-bottom: 0px;
-          color: rgb(67, 15, 15);
+          // color: #fff;
+         color: rgb(67, 15, 15);
         }
       }
      
@@ -316,15 +256,36 @@ h1{
 
   .leaflet-container{
    
-    height: 400px;
+    // height: 400px;
     padding-top: 0;
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
+    margin-left: 10%;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 30px;
 
   }
 }
+// .contact .zone .form {
+//   margin: 0;
+// }
 
+  }
+  input[name="subject"]{
+    width: 50%;
+    margin-left: 10px;
+    
+  }
+  input[name="user_name"]{
+    margin-left: 10px;
+    width:36%
+  }
+  input[name="email"]{
+    margin-left: 4%;
+    width: 36%;
+  
   }
   
 

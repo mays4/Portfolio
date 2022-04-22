@@ -1,23 +1,23 @@
 html{
   font-size:62.5% ;
-  color: rgb(160, 160, 224);
- 
+  /* color: rgb(160, 160, 224); */
+  scroll-behavior: smooth;
+  height: 100%;
   
 }
 
 body {
   margin: 0;
+  height: 100vh;
    font: 300 11px/1.4 'Helvetica Neue','sans-serif';
   color: #4444; 
-  height: 1000px;
-  /* background: #BEB3B4; */
+
   background: rgba(255, 167, 167, 0.4039215686);
-  overflow: hidden;
-  /* display: block; */
-   /* display: flex;
-  flex-direction: column;  */
+  overflow-y:scroll;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
+   scroll-behavior: smooth;
 }
 
 

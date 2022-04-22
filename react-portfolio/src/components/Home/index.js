@@ -3,21 +3,22 @@ import './index.scss';
 import title from '../../assets/images/logo-m-m.png'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from "../AnimatedLetters"
-import Logo from './Logo'
 import Profile from './Profile'
 import Loader from 'react-loaders'
 import { ThemeContext } from '../../context/ThemeContext';
-
+import ScrollableFeed from 'react-scrollable-feed';
 import 'animate.css'
 import Contact from '../Contact';
+import About from'../About';
 
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const {theme,setTheme}= useContext(ThemeContext);
-  // const [theme , setTheme]=useState('light')
+  const items=[<About/>,<Contact/>]
   const nameArray =['a','y','s']
   const jobArray=['w','e','b',' ','d','e','v','e','l','o','p','e','r','.']
+  // const stackArray=['F','u','l','l',' ','S','t','a','c','k',' ','D','e','v','e','l','o','p','e','r','.']
   useEffect(() => {
    setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -28,14 +29,14 @@ const Home = () => {
 
   return (
     <>
-    
     <div className={theme}> 
-    <div className="container home-page" >
+    <div className='home'>
+    <div className="home-page" >
  
     
       <div className="text-zone">
       
-        <h1>
+        <h1 className='words'>
           <span className={letterClass}>H</span>
           <span className={`${letterClass} _12`}>i,</span>
           <br />
@@ -58,25 +59,33 @@ const Home = () => {
             idx={21}
           />
         </h1>
-        
-        <h2>Full Stack Developer</h2>
-    
+     
+        <h2>Full stack Developer</h2>
+       <br></br>
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
         
-     
+        </div>
 
       </div>
+      <div className='proto'>
+        <Profile/>
+      </div>
       
-      <Profile/>
-      
-     
+    
     </div>
-    {/* <Logo/> */}
-    {/* <div className='conatiner-contact'>
-        <Contact/>
-    </div> */}
+    <div className='about-item'>
+    <ScrollableFeed>
+       <About/>
+      </ScrollableFeed>
+      </div>
+      <div className='contact-item'>
+      <ScrollableFeed>
+       <Contact/>
+      </ScrollableFeed>
+    </div>
+  
  </div>
     <Loader type="line-spin-fade-loader" />
   
