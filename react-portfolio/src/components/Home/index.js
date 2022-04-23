@@ -10,6 +10,7 @@ import ScrollableFeed from 'react-scrollable-feed';
 import 'animate.css'
 import Contact from '../Contact';
 import About from'../About';
+import Projects from '../Projects'
 
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
   const items=[<About/>,<Contact/>]
   const nameArray =['a','y','s']
   const jobArray=['w','e','b',' ','d','e','v','e','l','o','p','e','r','.']
-  // const stackArray=['F','u','l','l',' ','S','t','a','c','k',' ','D','e','v','e','l','o','p','e','r','.']
+
   useEffect(() => {
    setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -83,6 +84,11 @@ const Home = () => {
       <div className='contact-item'>
       <ScrollableFeed>
        <Contact/>
+      </ScrollableFeed>
+    </div>
+    <div className='contact-item'>
+      <ScrollableFeed>
+       <Projects/>
       </ScrollableFeed>
     </div>
   

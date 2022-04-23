@@ -9,7 +9,7 @@
     width: 50%;
     .letters{
       padding-top: 4px;
-     margin-left: 35px;
+      margin-left: 35px;
     }
     .parg{
       padding-top: 20px;
@@ -60,7 +60,7 @@
     background: #3f0d2e;
     height: 50px;
     font-size: 16px;
-    // color: #fff;
+
     box-sizing: border-box;
     border-radius: 20px;
     padding-left: 20px;
@@ -99,7 +99,7 @@
     padding: 8px 10px;
     float: left;
     float: right;
-    margin-right: 200px;
+    margin-right: 250px;
     
   }   
   }  
@@ -117,6 +117,7 @@ h1{
   margin-bottom: 40px;
   left: 10px;
   padding-top: 20px;
+  margin-left: 30%;
 
 }
 .map-wrap {
@@ -180,20 +181,14 @@ h1{
         margin-bottom: 0;
       }
       .parg{
+        display: flex;
+        margin-left: 10px;
         .contact-info-p{
-          font-size: 18px;
+          font-size: 28px;
           width: 100%;
           font-weight: 300;
           
-          //  margin-left: 2px;
-          // padding-left: 50px;
-          // margin-right: 4px;
-         
-        
-          
-          // margin-bottom: 0;
-          // padding-bottom: 0px;
-          // color: rgb(13, 32, 118);
+      
         }
       }
     }
@@ -238,7 +233,10 @@ h1{
         margin-bottom: 10px;
       }
       .parg{
+        display: flex;
+        margin: 2%;
         .contact-info-p{
+         
           font-size: 30px;
           width: 100%;
           font-weight: 300;

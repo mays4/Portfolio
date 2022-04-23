@@ -1,9 +1,11 @@
 .light {
   width: 100%;
   height: 100vh;
+  overflow-y:scroll;
   // min-height: 566px;
   position: absolute;
   opacity: 0;
+
   // top: 5%;
   // padding-top: 2%;
   margin: 0 auto;
@@ -35,19 +37,21 @@
 }
 }
 
+
 .dark{
+  
    width: 100%;
    height: 100vh;
-  min-width: 566px;
-  // position: absolute;
+   overflow-y:scroll;
+  // min-width: 566px;
+   position: absolute;
   opacity: 0;
- 
   z-index: 1;
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
   background-color: black;
-  
+
   .about-p{
   color: gray;
   }
@@ -68,6 +72,7 @@
     background: 0 0;
     color:#fff;
     border: 1px solid #fff;
+
   &:hover {
        background-color:gray;
       color: #000;
@@ -83,7 +88,7 @@
   
 }
 
-page {
+.page {
   width: 100%;
  }
  .contact{
@@ -94,27 +99,11 @@ page {
    
  }
 
-.container {
-  // width: 100%;
-  // display: flex;
-  //  flex-direction: column;
-  // min-height: 100vh;
-  // will-change: contents;
-  //  height: 100%;
-  // // min-height: 566px;
-  // position: absolute;
-
-  // opacity: 0;
-  // // top: 5%;
-  // padding-top: 2%;
-  // margin: 0 auto;
-  // z-index: 1;
-  // transform-style: preserve-3d;
-  // animation: fadeIn 1s forwards;
-  // animation-delay: 1s;
 
  
-}
+
+
+
 .about-page,
 .contact-page{
   .text-zone{
@@ -150,6 +139,8 @@ page {
     }
   }
 }
+
+
 .text-animate-hover {
   &:hover {
     color: #fff;
@@ -163,6 +154,7 @@ page {
 .contact .zone .parg .contact-info-p{
   // color: #fff;
 }
+
 
 @media screen and (max-width: 576px) {
   .container {
