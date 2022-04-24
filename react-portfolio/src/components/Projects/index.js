@@ -13,18 +13,12 @@ import data from '../../assets/Data/data';
 const Projcet = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
-  const [isOpen, setIsOpen] = useState(false);
+
   const { theme, setTheme } = useContext(ThemeContext);
   const [tabValue, setTabValue] = useState('All');
   const [project, setProject] = useState(false);
-  
 
-  // const handleShow = () => {
-  //   setIsOpen(true);
-  // };
-  const handleClose = () =>{
-    setIsOpen(!isOpen);
-  } 
+
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
@@ -33,128 +27,124 @@ const Projcet = () => {
 
   return (
     <>
-      <div className={theme}>
-        <div className="project-title">
-          <h1 className="letters">
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['P', 'r', 'o', 'j', 'e', 'c', 't', 's']}
-              idx={15}
-            />
-          </h1>
-        </div>
-        <div>
-          <h2 className="porojects_par">Some of the projects</h2>
-          <div>
-            <Tabs
-              value={tabValue}
-              className="custom_tabs"
-              indicatorColor='gray'
-              onChange={(event, newValue) => setTabValue(newValue)}
-            >
-              <Tab
-                value="All"
-                label="All"
-                className={
-                  tabValue ? 'customTabs_item active' : 'customtabs_item'
-                }
-              />
-              {[...new Set(data.projects.map((item) => item.tag))].map(
-                (tag) => (
+      <div className="project-container">
+        <div className={theme}>
+          <div className="pro-wrap">
+            <div className="project-title">
+              <h1 className="letters">
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={['P', 'r', 'o', 'j', 'e', 'c', 't', 's']}
+                  idx={15}
+                />
+              </h1>
+            </div>
+            <div>
+              <h2 className="porojects_par">Some of the projects</h2>
+              <div>
+                <Tabs
+                  value={tabValue}
+                  className="custom_tabs"
+                  indicatorColor="gray"
+                  onChange={(event, newValue) => setTabValue(newValue)}
+                >
                   <Tab
-                    label={tag}
-                    value={tag}
+                    value="All"
+                    label="All"
                     className={
-                      tabValue === tag
-                        ? 'customTabs_item active'
-                        : 'customTabs_item'
+                      tabValue ? 'customTabs_item active' : 'customtabs_item'
                     }
                   />
-                )
-              )}
-            </Tabs>
-          </div>
-        </div>
-        <div className="post_wrapper">
-          {data.projects.map(item => (
-            <>
-              {tabValue == item.tag || tabValue == 'All' ? (
-                <div
-                  className="project-post"
-                  
-                  onClick={() => setProject(item)}
-                >
-                  <img
-                    // onClick={handleShow}
-                    className="thum"
-                    src={item.image}
-                    alt="register page"
-                  ></img>
-                  <div className="preview">
-                    <h2 className="post-title"> {item.title}</h2>
-                    <p className="post-intro">{item.description}</p>
-                  </div>
-                </div>
-              ) : null}
-            </>
-          ))}
-        </div>
-     
-        <Dialog
-          open={project}
-          className="dail"
-        
-        >
-           <DialogTitle className="post-title"  >
-             {project.title}</DialogTitle>
-           <DialogContent>
-          <div className="close_x">
-            <button onClick={()=>setProject(false)}>X</button>
-          </div>
-       
-             {project?.images?.map((image,index) => (
-            <Carousel 
-              className="project_image"
-              autoPlay
-              interval="5000"
-              
-              transitionTime="2000"
-              showThumbs={false}
-            >
-              <img
-                className="thumnail"
-                src={image.image_1}
-                alt="create URL"
-              ></img>
-              <img
-                className="thumnail"
-                src={image.image_2}
-                alt="create URL"
-              ></img>
-              <img
-                className="thumnail"
-                src={image.image_3}
-                alt="create URL"
-              ></img>
-            </Carousel>
-          ))} 
-         
-
-          <p className="post-intro">{project.info}</p>
-          {project?.links?.map((link,index) => (
-            <div key={index}>
-              <a target="_blank"  className="git" rel="noreferrer" href={link.link}>
-                <FontAwesomeIcon
-                  icon={link.icon}
-                  color="#4d4d4e"
-                  
-                />
-              </a>
+                  {[...new Set(data.projects.map((item) => item.tag))].map(
+                    (tag) => (
+                      <Tab
+                        label={tag}
+                        value={tag}
+                        className={
+                          tabValue === tag
+                            ? 'customTabs_item active'
+                            : 'customTabs_item'
+                        }
+                      />
+                    )
+                  )}
+                </Tabs>
+              </div>
             </div>
-          ))} 
-          </DialogContent>
-        </Dialog>
-       
+            <div className="post_wrapper">
+              {data.projects.map((item) => (
+                <>
+                  {tabValue === item.tag || tabValue === 'All' ? (
+                    <div
+                      className="project-post"
+                      onClick={() => setProject(item)}
+                    >
+                      <img
+                        // onClick={handleShow}
+                        className="thum"
+                        src={item.image}
+                        alt="register page"
+                      ></img>
+                      <div className="preview">
+                        <h2 className="post-title"> {item.title}</h2>
+                        <p className="post-intro">{item.description}</p>
+                      </div>
+                    </div>
+                  ) : null}
+                </>
+              ))}
+            </div>
+
+            <Dialog open={project} className="dail">
+              <DialogTitle className="post-title">{project.title}</DialogTitle>
+              <DialogContent>
+                <div className="close_x">
+                  <button onClick={() => setProject(false)}>X</button>
+                </div>
+
+                {project?.images?.map((image, index) => (
+                  <Carousel
+                    className="project_image"
+                    autoPlay
+                    interval="5000"
+                    transitionTime="2000"
+                    showThumbs={false}
+                  >
+                    <img
+                      className="thumnail"
+                      src={image.image_1}
+                      alt="create URL"
+                    ></img>
+                    <img
+                      className="thumnail"
+                      src={image.image_2}
+                      alt="create URL"
+                    ></img>
+                    <img
+                      className="thumnail"
+                      src={image.image_3}
+                      alt="create URL"
+                    ></img>
+                  </Carousel>
+                ))}
+
+                <p className="post-intro">{project.info}</p>
+                {project?.links?.map((link, index) => (
+                  <div key={index}>
+                    <a
+                      target="_blank"
+                      className="git"
+                      rel="noreferrer"
+                      href={link.link}
+                    >
+                      <FontAwesomeIcon icon={link.icon} color="#4d4d4e" />
+                    </a>
+                  </div>
+                ))}
+              </DialogContent>
+            </Dialog>
+          </div>
+        </div>
       </div>
     </>
   );

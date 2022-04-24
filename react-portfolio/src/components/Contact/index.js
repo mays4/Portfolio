@@ -42,6 +42,7 @@ const Contact = () => {
  
   return (
     <>
+    <div className='contact-contact'></div>
       <div className={theme}>
      
       <div className="contact">
